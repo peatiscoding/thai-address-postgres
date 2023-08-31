@@ -1,7 +1,7 @@
 # thai-address-postgres
 Thailand Postal Address Database
 
-Based on [this post](https://dooplearn.com/province-database/) which was written in MySQL.
+Based on [this post](https://dooplearn.com/province-database/) which was written in MySQL. (Accoding to the article, it is updated on 2023)
 
 The file has been:
 
