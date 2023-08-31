@@ -46,3 +46,22 @@ FROM
 	LEFT JOIN district ON district.code = subdistrict.district_code
 	LEFT JOIN provinces ON provinces.code = district.province_code;
 ```
+## Select all elements with Code, and labels as JSON
+
+```sql
+SELECT
+	subdistrict.code AS subdistrct_code,
+	zip_code,
+	district.code AS district_code,
+	provinces.code AS province_code,
+	geography_id AS region_id,
+	json_build_object('en', subdistrict.name_en, 'th', subdistrict.name_th) AS subdistrict,
+	json_build_object('en', district.name_en, 'th', district.name_th) AS district,
+	json_build_object('en', provinces.name_en, 'th', provinces.name_th) AS province,
+	json_build_object('en', geographies.name_en, 'th', geographies.name_th) AS region
+FROM
+	public.subdistrict
+	LEFT JOIN district ON district.code = subdistrict.district_code
+	LEFT JOIN provinces ON provinces.code = district.province_code
+	LEFT JOIN geographies ON geographies.id = provinces.geography_id;
+```
