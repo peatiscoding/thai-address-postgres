@@ -16,7 +16,6 @@ Here are some example of usages
 ## Select all zipcode and all thainames
 
 ```sql
--- select all thai names
 SELECT
 	subdistrict.code,
 	zip_code,
@@ -34,7 +33,6 @@ FROM
 ## Select all zipcode without Geography in English
 
 ```sql
--- select all thai names
 SELECT
 	subdistrict.code,
 	zip_code,
