@@ -48,7 +48,7 @@ FROM
 
 ```sql
 SELECT
-	subdistrict.code AS subdistrct_code,
+	subdistrict.code AS subdistrict_code,
 	zip_code,
 	district.code AS district_code,
 	provinces.code AS province_code,
